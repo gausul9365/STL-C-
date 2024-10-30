@@ -84,7 +84,62 @@ int vectorLearing(){
       cout<<it<<" ";
     }
   }
+  
 
+  int insertLearn(){
+    vector<int> v(2,39);
+    v.insert(v.begin(), 40);
+    cout<<endl;
+    for(auto it : v){
+      cout<<it<<" ";
+    }
+    v.insert(v.begin()+1,2, 99);
+     for(auto it : v){
+      cout<<it<<" ";
+    }
+    // copy
+    vector <int>copy(2,50);
+    copy.insert(copy.begin(),v.begin(), v.end()); //copy syntax
+     for(auto it : copy){
+      cout<<it<<" ";
+    }
+
+    // some function 
+
+    cout<<endl<<v.size()<<endl;
+    cout<<copy.size()<<endl;
+    v.pop_back();
+     for(auto it : v){
+      cout<<it<<" ";
+    }
+      cout<<endl<<"...before swapping..."<<endl;
+       for(auto it : v){
+      cout<<it<<" ";
+    }
+    cout<<endl;
+     for(auto it : copy){
+      cout<<it<<" ";
+    }
+    cout<<endl<<"...after swapping..."<<endl;
+    // swapping
+    v.swap(copy);
+     for(auto it : v){
+      cout<<it<<" ";
+    }
+    cout<<endl;
+     for(auto it :copy){
+      cout<<it<<" ";
+    }
+
+    // empty
+    cout<<endl<<v.empty()<<endl;
+    // clear
+    v.clear();
+    cout<<endl<<v.empty()<<endl; //output 1 aa 4 rha hai iska matlab true ho gya aur v empty ho gya
+  }
+
+
+  
      
 
 
@@ -94,6 +149,7 @@ int main() {
   Learniterator();
   LearnEndAndReverse();
   eraseAndDelete();
+  insertLearn();
 
   return 0;
 
